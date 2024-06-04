@@ -1,0 +1,1 @@
+export const ORIGIN = 'https://api.potterdb.com/v1/'

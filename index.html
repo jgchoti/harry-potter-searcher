@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Potter</title>
+    </head>
+    <body>
+        <div id="user-input">
+            <label for="types"></label>
+            <select name="types" id="types">
+                <option value="characters">Characters</option>
+                <option value="movies">Movies</option>
+                <option value="books">Books</option>
+                <option value="potions">Potions</option>
+                <option value="spells">Spells</option>
+            </select>
+            <select name="filter" id="filter">
+                <option value="cont">contains</option>
+                <option value="not_cont">doesn't contain</option>
+                <option value="start">starts with</option>
+                <option value="end">ends with</option>
+            </select>
+            <input type="text" id="user-input-text" class="input-field" />
+            <button class="btn" id="submit-btn" type="submit">Search</button>
+        </div>
+        <div id="output"></div>
+        <script type="module" src="./src/init.js"></script>
+    </body>
+</html>
