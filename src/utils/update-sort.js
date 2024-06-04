@@ -13,9 +13,8 @@ export const updateSort = (sortOrder = 'ascending') => {
     }
 
     if (sortOrder === 'ascending') {
-        state.sort.ascending = true
-
+        state.sort.sortOrder = true
     } else {
-        state.sort.ascending = false
+        state.sort.sortOrder = false
     }
 };
