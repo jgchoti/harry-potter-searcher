@@ -2,17 +2,20 @@ import { ORIGIN } from "../../config.js";
 import { state } from "../../data/state.js";
 
 export const apiService = async () => {
-
+    console.log(state)
     let url = `${ORIGIN}${state.type}/`;
 
-    if (['characters', 'potions', 'spells'].includes(state.type)) {
-        state.filter.nameType = 'name';
-    } else {
-        state.filter.nameType = 'title';
-    }
-
     //filter parameters
-    let filterQuery = `?filter[${state.filter.nameType}_${state.filter.filterBy}]=${state.searchTerm}`;
+    let isFirstFilter = true;
+    state.filter.forEach(filter => {
+        let filterQuery = `filter[${filter.filterType}_${filter.filterBy}]=${filter.searchTerm}`;
+        if (isFirstFilter) {
+            url = url + '?' + filterQuery;
+            isFirstFilter = false;
+        } else {
+            url = url + '&' + filterQuery;
+        }
+    });
 
     //sort parameters
     let sortQuery = `&sort=${state.sort.ascending ? '' : '-'}${state.sort.sortBy}`;
@@ -24,20 +27,20 @@ export const apiService = async () => {
     };
 
 
-    url += filterQuery + sortQuery;
+    url += sortQuery;
     for (const key in pageQuery) {
         if (pageQuery[key] !== undefined) {
             url += `&${key}=${pageQuery[key]}`;
         }
     }
-    console.log(url)
+
     const encodedURL = encodeURI(url);
     const response = await fetch(encodedURL);
 
     if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
     }
-
+    console.log(url)
     const searchResult = await response.json();
     return searchResult;
 
