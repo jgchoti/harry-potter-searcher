@@ -4,7 +4,7 @@ import { updateSort } from "../utils/update-sort.js";
 
 export const sortHandler = (event) => {
     const sortOrder = event.target.id
-
+    console.log(sortOrder)
     const sortButtons = document.querySelectorAll('button');
     sortButtons.forEach(button => button.classList.remove('active'));
 
@@ -12,5 +12,5 @@ export const sortHandler = (event) => {
     buttonEl.classList.add('active');
 
     updateSort(sortOrder)
-
+    setData()
 }
