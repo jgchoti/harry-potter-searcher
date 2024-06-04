@@ -4,6 +4,8 @@ import { renderError } from "../components/render-error.js"
 import { renderPageResult } from "../components/render-page-result.js"
 import { renderPaginator } from "../components/render-paginator.js"
 import { renderSort } from "../components/render-sort.js"
+
+
 export const setData = async (inputValue) => {
     const outputContainer = document.getElementById('output')
     outputContainer.innerHTML = ''
@@ -26,6 +28,7 @@ export const setData = async (inputValue) => {
         renderSort()
         renderPageResult()
         renderPaginator()
+
     } catch (error) {
         throw new Error(error.message)
     }
