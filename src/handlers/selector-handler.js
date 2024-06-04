@@ -12,11 +12,11 @@ export const selectorHandler = (event) => {
 
     if (id === 'types') {
         typeChangeHandler();
-    } else if (id === 'selector - page - size') {
+    } else if (id === 'selector-page-size') {
         updatePageSize(Number(event.target.value));
-    } else {
-        updateFilters();
-        updateSort();
     }
+
+    updateFilters();
+    updateSort();
     setData();
 };
