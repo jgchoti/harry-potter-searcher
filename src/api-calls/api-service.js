@@ -2,7 +2,7 @@ import { ORIGIN } from "../../config.js";
 import { state } from "../../data/state.js";
 
 export const apiService = async () => {
-    console.log(state)
+
     let url = `${ORIGIN}${state.type}/`;
 
     //filter parameters
@@ -40,7 +40,8 @@ export const apiService = async () => {
     if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
     }
-    console.log(url)
+    // console.log(url)
+    console.log(state)
     const searchResult = await response.json();
     return searchResult;
 
