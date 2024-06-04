@@ -27,6 +27,13 @@ export const renderSort = () => {
         sortBtnListener(buttonEL.id)
     })
 
+    if (state.sort.sortOrder) {
+        document.getElementById('ascending').classList.add('active');
+    } else {
+        document.getElementById('descending').classList.add('active');
+    }
+
+
     selectorListener(id)
 
 }
