@@ -1,16 +1,15 @@
 import { state } from "../../data/state.js"
 import { renderError } from "../components/render-error.js"
 import { setData } from "../utils/set-data.js"
+import { updateFilters } from "../utils/update-filters.js"
+import { updateSort } from "../utils/update-sort.js"
 
 export const userInputHandler = () => {
-    const inputValue = document.getElementById("user-input-text").value.trim()
-
-    if (inputValue.length === 0) {
-        renderError('empty input')
-    }
     const type = document.getElementById("types").value
     state.type = type
-    state.searchTerm = inputValue
     state.pagination.currentPage = 1
+
+    updateFilters()
+    updateSort()
     setData()
 }
