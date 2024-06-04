@@ -1,10 +1,7 @@
 export const state = {
-    searchTerm: '',
     type: 'characters',
-    filter: {
-        nameType: 'name',
-        filterBy: 'cont',
-    },
+    filterCount: 1,
+    filter: [],
     sort: {
         sortBy: 'name',
         ascending: true
@@ -17,5 +14,4 @@ export const state = {
     },
     data: []
 }
-
 
