@@ -26,6 +26,7 @@ export const renderPaginator = () => {
         selectEl.appendChild(optionEl)
     }
     container.appendChild(selectEl)
+
     selectorListener(selectEl.id)
 
     const pEl = document.createElement('p')
