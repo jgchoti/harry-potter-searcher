@@ -4,7 +4,7 @@ export const state = {
     filter: [],
     sort: {
         sortBy: 'name',
-        ascending: true
+        sortOrder: true
     },
     pagination: {
         currentPage: 1,
