@@ -1,5 +1,6 @@
 import { state } from "../../data/state.js"
 import { setData } from "../utils/set-data.js"
+import { updateSort } from "../utils/update-sort.js";
 
 export const sortHandler = (event) => {
     const sortOrder = event.target.id
@@ -10,11 +11,6 @@ export const sortHandler = (event) => {
     const buttonEl = document.getElementById(sortOrder);
     buttonEl.classList.add('active');
 
-    if (sortOrder === 'ascending') {
-        state.sort.ascending = true
+    updateSort(sortOrder)
 
-    } else {
-        state.sort.ascending = false
-    }
-    setData()
 }
