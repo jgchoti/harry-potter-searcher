@@ -29,11 +29,6 @@ export const setData = async (inputValue) => {
         renderPaginator()
         renderSort()
 
-        const activeSortButton = document.getElementById(state.sortOrder);
-        if (activeSortButton) {
-            activeSortButton.classList.add('active');
-        }
-
     } catch (error) {
         throw new Error(error.message)
     }
