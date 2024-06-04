@@ -18,7 +18,7 @@ export const apiService = async () => {
     });
 
     //sort parameters
-    let sortQuery = `&sort=${state.sort.ascending ? '' : '-'}${state.sort.sortBy}`;
+    let sortQuery = `&sort=${state.sort.sortOrder ? '' : '-'}${state.sort.sortBy}`;
 
     // pagination parameters
     const pageQuery = {
