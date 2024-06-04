@@ -7,7 +7,7 @@ export const renderPageResult = () => {
         const container = document.createElement('div')
 
         const titleEl = document.createElement('h3')
-        titleEl.textContent = `${state.filter.nameType === 'name' ? item.attributes.name : item.attributes.title}`
+        titleEl.textContent = `${state.type === "characters" || state.type === 'spells' || state.type === 'potions' ? item.attributes.name : item.attributes.title}`
 
         container.appendChild(titleEl)
         outputContainer.appendChild(container)
