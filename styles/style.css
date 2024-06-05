@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("./index.css");
+@import url("./button.css");
+@import url("./error.css");
+@import url("./item-card.css");
+@import url("./pagination.css");
+@import url("./sort.css");
+@import url("./filter.css");
+
+:root {
+  --pink: #de6b80;
+  --blue: #397db2;
+  --light-pink: #ffc5e0;
+  --light-blue: #439ee0;
+  --bg-color: #0e0e0e;
+  --font-family-title: "Mouse Memoirs", sans-serif;
+  --font-family: "Reddit Mono", monospace;
+}
