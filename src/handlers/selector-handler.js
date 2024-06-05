@@ -10,7 +10,7 @@ export const selectorHandler = (event) => {
     outputContainer.innerHTML = '';
     const id = event.target.id;
 
-    if (id === 'types') {
+    if (id === 'selector-types') {
         typeChangeHandler();
     } else if (id === 'selector-page-size') {
         updatePageSize(Number(event.target.value));
