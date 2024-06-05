@@ -5,7 +5,7 @@ import { updateFilters } from "../utils/update-filters.js"
 import { updateSort } from "../utils/update-sort.js"
 
 export const userInputHandler = () => {
-    const type = document.getElementById("types").value
+    const type = document.getElementById("selector-types").value
     state.type = type
     state.pagination.currentPage = 1
 
