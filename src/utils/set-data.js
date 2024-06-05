@@ -26,8 +26,9 @@ export const setData = async (inputValue) => {
         state.data = response.data
 
         renderPageResult()
-        renderPaginator()
         renderSort()
+        renderPaginator()
+
 
     } catch (error) {
         throw new Error(error.message)
