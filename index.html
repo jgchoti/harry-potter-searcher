@@ -3,26 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/da68399f87.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Potter</title>
   </head>
   <body>
+    <div class="header">
+      <img src="./assets/potter.jpeg" />
+    </div>
     <div id="user-input">
-      <label for="types"></label>
-      <select name="types" id="types">
-        <option value="characters">Characters</option>
-        <option value="movies">Movies</option>
-        <option value="books">Books</option>
-        <option value="potions">Potions</option>
-        <option value="spells">Spells</option>
-      </select>
+      <div id="types">
+        <label for="selector-types"></label>
+        <select name="selector-types" id="selector-types">
+          <option value="characters">Characters</option>
+          <option value="movies">Movies</option>
+          <option value="books">Books</option>
+          <option value="potions">Potions</option>
+          <option value="spells">Spells</option>
+        </select>
+      </div>
       <div id="filter"></div>
-
-      <button class="btn" id="submit-btn" type="submit">Search</button>
-
+      <div id="container-btn">
+        <button class="btn" id="btn-add-filter" type="submit">
+          Add Filter
+        </button>
+        <button class="btn" id="btn-submit" type="submit">Search</button>
+      </div>
       <div id="sort"></div>
     </div>
 
     <div id="output"></div>
+    <div id="footer"></div>
     <script type="module" src="./src/init.js"></script>
   </body>
 </html>
