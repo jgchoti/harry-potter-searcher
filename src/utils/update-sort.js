@@ -5,10 +5,8 @@ export const updateSort = (sortOrder = 'ascending') => {
     if (selectorSort) {
         state.sort.sortBy = selectorSort.value
     } else if (state.type === "characters" || state.type === 'spells' || state.type === 'potions') {
-        console.log(state.type)
         state.sort.sortBy = 'name'
     } else {
-        console.log(state.type)
         state.sort.sortBy = 'title'
     }
 
