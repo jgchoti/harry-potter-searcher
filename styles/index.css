@@ -1,0 +1,52 @@
+body {
+  margin-bottom: 120px;
+  background: var(--bg-color);
+}
+
+#user-input {
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  object-fit: cover;
+}
+
+#user-input select#selector-types {
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#user-input #filter {
+  display: block;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+#user-input input {
+  border: 2px solid var(--blue);
+  color: var(--light-blue);
+  border-radius: 8px;
+  font-family: var(--font-family);
+}
+
+/* 
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--pink);
+  color: white;
+  text-align: center;
+  font-family: var(--font-family-title);
+  letter-spacing: 2px;
+} */
