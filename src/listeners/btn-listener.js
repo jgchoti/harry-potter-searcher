@@ -1,6 +1,6 @@
 import { userInputHandler } from '../handlers/user-input-handler.js';
 
-export const btnListener = () => {
-    document.getElementById('submit-btn').addEventListener('click', userInputHandler);
+export const btnListener = (id) => {
+    document.getElementById(id).addEventListener('click', userInputHandler);
 };
 
