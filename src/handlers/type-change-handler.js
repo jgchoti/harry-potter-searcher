@@ -4,7 +4,7 @@ import { updateFilters } from "../utils/update-filters.js";
 import { updateSort } from "../utils/update-sort.js";
 
 export const typeChangeHandler = (searchTerm) => {
-    state.type = document.getElementById('types').value;
+    state.type = document.getElementById('selector-types').value;
 
     state.filter = [];
     state.filterCount = 1;
