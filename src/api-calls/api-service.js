@@ -40,7 +40,7 @@ export const apiService = async () => {
     if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
     }
-    // console.log(url)
+    console.log(url)
     console.log(state)
     const searchResult = await response.json();
     return searchResult;
