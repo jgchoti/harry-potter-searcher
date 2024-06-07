@@ -41,5 +41,5 @@ export const renderSort = () => {
     selectorListener(id);
 };
 
-}
+
 
