@@ -1,4 +1,5 @@
 import { state } from "../../data/state.js"
+import { modifyLink } from "../utils/modify-link.js"
 import { modifyText } from "../utils/modify-text.js"
 
 export const renderPageResult = () => {
@@ -31,22 +32,34 @@ export const renderPageResult = () => {
         textContainer.appendChild(ulEl)
 
         for (const key in item.attributes) {
-            if (item.attributes[key] !== null && item.attributes[key].length !== 0 && key !== 'name' && key !== 'slug' && key !== 'image') {
+            if (item.attributes[key] !== null && item.attributes[key].length !== 0 && key !== 'name' && key !== 'slug' && key !== 'image' && key !== 'poster' && key !== 'cover' && key !== 'trailer' && key !== 'title') {
                 const liEl = document.createElement('li')
                 if (key === 'wiki') {
                     const aEl = document.createElement('a')
                     aEl.href = item.attributes['wiki']
                     aEl.target = "_blank"
-                    aEl.innerHTML = `More Info about... ${nameType}`
+                    aEl.innerHTML = `More info about... ${nameType}`
                     liEl.appendChild(aEl)
-                } else {
-                    let text = modifyText(key)
-                    liEl.innerHTML = `<strong>${text}</strong>: ${item.attributes[key]}`
+                    ulEl.appendChild(liEl);
                 }
-                ulEl.appendChild(liEl)
+                else {
+                    const title = modifyText(key);
+                    const liEl = document.createElement('li');
+                    liEl.innerHTML = `<strong>${title}</strong>: ${item.attributes[key]}`;
+                    ulEl.appendChild(liEl);
+                }
             }
 
         }
+        if (item.attributes['trailer']) {
+            const trailerLink = modifyLink(item.attributes['trailer'])
+            const iframeEL = document.createElement('iframe')
+            iframeEL.src = trailerLink
+            iframeEL.width = "420"
+            iframeEL.height = "315"
+            container.appendChild(iframeEL)
+        }
+
         searchResultContainer.appendChild(container)
     })
     outputContainer.appendChild(searchResultContainer)
