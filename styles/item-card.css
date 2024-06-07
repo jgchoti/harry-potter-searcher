@@ -8,8 +8,8 @@
   background-color: var(--bg-card-color);
   padding: 10px;
   margin: 8px 4px;
-  border-radius: 15px;
-  border: 2px solid black;
+  border-radius: 36px;
+  border: 2px solid var(--border-color);
   max-width: 600px;
 }
 
@@ -17,7 +17,7 @@
   display: block;
   border-radius: 18px;
   text-align: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 8px;
   max-width: 600px;
 }
 
@@ -33,6 +33,7 @@
   font-size: 36px;
   color: var(--title-color);
   letter-spacing: 2px;
+  margin: 24px 36px 12px;
 }
 
 .container-card-info ul {
@@ -42,12 +43,33 @@
 
 .container-card-info ul li {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-left: 36px;
+  margin-bottom: 8px;
   line-height: 26px;
-  color: var(--blue);
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.container-card-info a {
+  text-decoration: none;
+  color: var(--border-color);
+  display: block;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.container-card-info a:hover,
+.container-card-info a:focus {
+  opacity: 0.75;
+}
+
+iframe {
+  display: block;
+  margin: 8px auto;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
