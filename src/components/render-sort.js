@@ -32,12 +32,14 @@ export const renderSort = () => {
 
     if (state.sort.sortOrder) {
         document.getElementById('ascending').classList.add('active');
+        document.getElementById('descending').classList.remove('active');
     } else {
+        document.getElementById('ascending').classList.remove('active');
         document.getElementById('descending').classList.add('active');
     }
 
-
-    selectorListener(id)
+    selectorListener(id);
+};
 
 }
 
