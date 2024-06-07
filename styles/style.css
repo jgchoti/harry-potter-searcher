@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("./index.css");
 @import url("./button.css");
 @import url("./error.css");
@@ -8,10 +9,11 @@
 @import url("./filter.css");
 
 :root {
-  --text-color: #fff;
-  --title-color: #946b2d;
-  --bg-card-color: #5d5d5d;
+  --text-color: #8f7a6b;
+  --title-color: #eeba3c;
+  --bg-card-color: #372e298051;
   --bg-color: #0e0e0e;
-  --font-family-title: "Mouse Memoirs", sans-serif;
-  --font-family: "Reddit Mono", monospace;
+  --border-color: #f9d15e;
+  --font-family-title: "MedievalSharp", cursive;
+  --font-family: "Montserrat", sans-serif;
 }
