@@ -8,23 +8,23 @@
   color: white;
 }
 
-#top-pagination > :first-child,
-#bottom-pagination > :first-child {
+#paginator-top > :first-child,
+#paginator-bottom > :first-child {
   text-align: right;
 }
 
-#top-pagination > :nth-child(2),
-#bottom-pagination > :nth-child(2) {
+#paginator-top > :nth-child(2),
+#paginator-bottom > :nth-child(2) {
   text-align: center;
 }
 
-#top-pagination > :last-child,
-#bottom-pagination > :last-child {
+#paginator-top > :last-child,
+#paginator-bottom > :last-child {
   text-align: left;
 }
 
-#top-pagination label,
-#bottom-pagination label {
+#paginator-top label,
+#paginator-bottom label {
   margin-right: 10px;
 }
 
@@ -32,7 +32,7 @@
   color: var(--blue);
 }
 
-#top-pagination button,
-#bottom-pagination button {
-  margin-right: 4px;
+#paginator-top button,
+#paginator-bottom button {
+  margin-right: 2px;
 }
