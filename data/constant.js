@@ -19,7 +19,7 @@ export const FILTER_OPTION = {
         'nationality': 'Nationality',
         'alias_names': 'Alias Names',
         'jobs': 'Jobs',
-        'family_member': 'family_member',
+        'family_member': 'Family Member',
         'romances': 'Romances',
         'patronus': 'Patronus',
         'wand': 'Wand',
