@@ -17,15 +17,18 @@ export const renderSort = () => {
     const selectEl = renderSelector(id, FILTER_OPTION[state.type])
     sortContainer.appendChild(selectEl)
 
-    const SORT_ORDER_BTN = ['ascending', 'descending']
-
-    SORT_ORDER_BTN.forEach(item => {
+    const SORT_ORDER_BTN = {
+        'ascending': '<i class="fa-solid fa-arrow-down-a-z"></i>',
+        'descending': '<i class="fa-solid fa-arrow-up-a-z"></i>'
+    }
+    for (const key in SORT_ORDER_BTN) {
         const buttonEL = document.createElement('button')
-        buttonEL.innerHTML = item
-        buttonEL.id = item
+        buttonEL.innerHTML = SORT_ORDER_BTN[key]
+        buttonEL.id = key
         sortContainer.appendChild(buttonEL)
         sortBtnListener(buttonEL.id)
-    })
+    }
+
 
     if (state.sort.sortOrder) {
         document.getElementById('ascending').classList.add('active');
