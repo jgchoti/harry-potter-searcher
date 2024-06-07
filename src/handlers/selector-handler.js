@@ -12,7 +12,7 @@ export const selectorHandler = (event) => {
 
     if (id === 'selector-types') {
         typeChangeHandler();
-    } else if (id === 'selector-page-size') {
+    } else if (id.startsWith('selector-page-size')) {
         updatePageSize(Number(event.target.value));
     }
 
