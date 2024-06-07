@@ -9,6 +9,8 @@ export const updateFilters = () => {
         const selectorFilter = document.getElementById(`selector-filter-${i}`);
         const selectorFilterBy = document.getElementById(`selector-filter-by-${i}`);
         const searchTerm = document.getElementById(`input-text-${i}`);
+
+        console.log(selectorFilter)
         if (selectorFilter && selectorFilterBy) {
             let filter = {
                 filterType: selectorFilter.value,
