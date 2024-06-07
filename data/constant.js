@@ -1,8 +1,8 @@
 export const BTN_PAGINATOR = {
-    'first': 'First',
-    'prev': '<',
-    'next': '>',
-    'last': 'Last',
+    'first': '<i class="fa-solid fa-backward-fast"></i>',
+    'prev': '<i class="fa-solid fa-chevron-left"></i>',
+    'next': '<i class="fa-solid fa-chevron-right"></i>',
+    'last': '<i class="fa-solid fa-forward-fast"></i>',
 }
 
 export const FILTER_OPTION = {
