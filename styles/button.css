@@ -3,3 +3,40 @@
   margin: 0 auto 24px;
   text-align: center;
 }
+#ascending,
+#descending {
+  margin-left: 4px;
+}
+.active {
+  background-color: var(--border-color);
+  color: var(--bg-color);
+}
+
+button {
+  background-color: #222;
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: var(--font-family-title);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 4px 18px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.75;
+}
