@@ -8,7 +8,7 @@ export const state = {
     },
     pagination: {
         currentPage: 1,
-        pageSize: 5,
+        pageSize: 6,
         totalPages: 1,
         totalResults: 0
     },
