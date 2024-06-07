@@ -51,7 +51,7 @@ export const renderPaginator = () => {
         containerBtn.classList.add('container-page-btn')
         for (const key in BTN_PAGINATOR) {
             const buttonEL = document.createElement('button');
-            buttonEL.innerText = BTN_PAGINATOR[key];
+            buttonEL.innerHTML = BTN_PAGINATOR[key];
             buttonEL.id = key + '-' + position;
             containerBtn.appendChild(buttonEL);
         }
