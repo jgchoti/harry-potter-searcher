@@ -4,7 +4,7 @@ import { renderError } from "../components/render-error.js"
 import { renderPageResult } from "../components/render-page-result.js"
 import { renderPaginator } from "../components/render-paginator.js"
 import { renderSort } from "../components/render-sort.js"
-import { updatePageSize } from "./update-page-size.js"
+// import { updatePageSize } from "./update-page-size.js"
 
 
 export const setData = async (inputValue) => {
