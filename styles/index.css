@@ -13,16 +13,17 @@ body {
 .header img {
   display: block;
   margin: 0 auto;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 
 #user-input select#selector-types {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   width: 200px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: var(--font-family-title);
 }
 
 #user-input #filter {
@@ -31,10 +32,16 @@ body {
   text-align: center;
 }
 
+#user-input select {
+  border: 2px solid var(--border-color);
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
 #user-input input {
-  border: 2px solid var(--blue);
-  color: var(--light-blue);
-  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  font-size: 16px;
+  color: var(--text-color);
   font-family: var(--font-family);
 }
 
