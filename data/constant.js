@@ -80,3 +80,8 @@ export const FILTER_BY_OPTION = {
     'lt': 'less than',
     'gt': 'greater than'
 }
+
+export const SORT_ORDER_BTN = {
+    'ascending': '<i class="fa-solid fa-arrow-down-a-z"></i>',
+    'descending': '<i class="fa-solid fa-arrow-up-a-z"></i>'
+}
