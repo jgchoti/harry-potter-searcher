@@ -3,3 +3,13 @@
   margin: 36px auto;
   text-align: center;
 }
+
+#sort label {
+  color: #fff;
+  font-family: var(--font-family);
+  margin-right: 8px;
+}
+
+#sort select {
+  margin-right: 4px;
+}
