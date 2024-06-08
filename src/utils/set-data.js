@@ -31,6 +31,8 @@ export const setData = async (inputValue) => {
 
 
     } catch (error) {
+        renderError(error.message)
         throw new Error(error.message)
+
     }
 }
