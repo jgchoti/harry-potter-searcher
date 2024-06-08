@@ -1,5 +1,5 @@
 import { state } from "../../data/state.js"
-import { FILTER_OPTION } from "../../data/constant.js"
+import { FILTER_OPTION, SORT_ORDER_BTN } from "../../data/constant.js"
 import { selectorListener } from "../listeners/selector-listener.js"
 import { sortBtnListener } from "../listeners/sort-btn-listener.js"
 import { renderSelector } from "./render-selector.js"
@@ -17,10 +17,6 @@ export const renderSort = () => {
     const selectEl = renderSelector(id, FILTER_OPTION[state.type])
     sortContainer.appendChild(selectEl)
 
-    const SORT_ORDER_BTN = {
-        'ascending': '<i class="fa-solid fa-arrow-down-a-z"></i>',
-        'descending': '<i class="fa-solid fa-arrow-up-a-z"></i>'
-    }
     for (const key in SORT_ORDER_BTN) {
         const buttonEL = document.createElement('button')
         buttonEL.innerHTML = SORT_ORDER_BTN[key]
