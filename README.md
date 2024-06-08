@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The PotterAPI Search Application is a project designed to interact with the PotterAPI to perform searches and retrieve information 
+The PotterAPI Search Application is a project designed to interact with the [PotterAPI](https://potterdb.com/) to perform searches and retrieve information 
 from the Harry Potter database. This application was developed as part of my studies with HackYourFuture Belgium, 
-aimed at deepening my understanding of JavaScript.
+aimed at deepening my understanding of JavaScript particularly in the realm of **Fetching Data:** using `fetch` and `async/await`
 
 ## Project Goals
 
@@ -29,7 +29,7 @@ The primary goal of this project is to implement the following features for inte
 - **DOM Manipulation:** manipulating the Document Object Model (DOM) to dynamically update the web page based on user interactions and API data.
 
 ### API Integration
-- **Fetching Data:** use `fetch` and `async/await` to retrieve data from the PotterAPI.
+- **Fetching Data:** use `fetch` and `async/await` to retrieve data from the [PotterAPI](https://potterdb.com/).
 - **Error Handling:**  manage API errors and provide feedback to users.
 
 ### Separation of Concerns
