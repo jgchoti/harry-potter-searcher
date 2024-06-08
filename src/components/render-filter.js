@@ -4,15 +4,19 @@ import { selectorListener } from "../listeners/selector-listener.js";
 import { renderSelector } from "./render-selector.js";
 import { textInputListener } from "../listeners/text-input-listener.js";
 
-export const renderFilter = () => {
+export const renderFilter = (reset = false) => {
     const container = document.getElementById('filter');
+
+    if (reset) {
+        container.innerHTML = '';
+    }
 
     const filterId = `selector-filter-${state.filterCount}`;
     const filterById = `selector-filter-by-${state.filterCount}`;
     const inputId = `input-text-${state.filterCount}`;
 
     const filterContainer = document.createElement('div');
-    filterContainer.classList.add('container-filter')
+    filterContainer.classList.add('container-filter');
 
     const filterSelector = renderSelector(filterId, FILTER_OPTION[state.type]);
     filterContainer.appendChild(filterSelector);
@@ -26,11 +30,11 @@ export const renderFilter = () => {
     inputEl.className = "input-field";
     filterContainer.appendChild(inputEl);
 
-    container.appendChild(filterContainer)
+    container.appendChild(filterContainer);
 
     textInputListener(inputId);
     selectorListener(filterId);
     selectorListener(filterById);
-
 };
+
 
