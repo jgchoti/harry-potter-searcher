@@ -4,8 +4,15 @@ body {
 }
 
 #user-input {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -14,7 +21,6 @@ body {
   display: block;
   margin: 0 auto;
   height: 300px;
-  object-fit: cover;
 }
 
 #user-input select#selector-types {
@@ -45,15 +51,35 @@ body {
   font-family: var(--font-family);
 }
 
-/* 
-#footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--pink);
-  color: white;
-  text-align: center;
-  font-family: var(--font-family-title);
-  letter-spacing: 2px;
-} */
+@media only screen and (max-width: 768px) {
+  #user-input {
+    text-align: center;
+    margin-bottom: 0;
+    /* Ensure the parent container aligns its children center */
+  }
+
+  #user-input input {
+    width: 285px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  #user-input select {
+    width: 100%; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    display: block;
+    text-align: center; /* Ensure it takes full width available */
+  }
+
+  .header {
+    text-align: center; /* Center the header content */
+  }
+
+  .header img {
+    height: auto; /* Adjust height or max-height if necessary */
+    max-width: 100%; /* Ensure image stays within container */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper block display */
+  }
+}

@@ -36,3 +36,32 @@
 #paginator-bottom button {
   margin-right: 2px;
 }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  #paginator-top,
+  #paginator-bottom {
+    grid-template-columns: 1fr;
+    grid-template-areas: "first" "center" "last";
+    text-align: center;
+    grid-gap: 0;
+  }
+
+  #paginator-top > :first-child,
+  #paginator-bottom > :first-child {
+    grid-area: first; /* Place first element at the top */
+    text-align: center; /* Align text to the left */
+  }
+
+  #paginator-top > :nth-child(2),
+  #paginator-bottom > :nth-child(2) {
+    grid-area: center; /* Place second element in the middle */
+    text-align: center; /* Align text to the right */
+  }
+
+  #paginator-top > :last-child,
+  #paginator-bottom > :last-child {
+    grid-area: last; /* Place last element at the bottom */
+    text-align: center; /* Center the text */
+  }
+}

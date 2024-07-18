@@ -46,7 +46,7 @@
   font-size: 16px;
   list-style-type: none;
   padding: 0;
-  margin-left: 36px;
+  margin-left: 16px;
   margin-bottom: 8px;
   line-height: 26px;
   color: var(--text-color);
@@ -84,5 +84,11 @@ iframe {
   }
   .item-info ul {
     padding: 0;
+  }
+  .container-card-info {
+    padding-left: 0;
+  }
+  .container-card-info ul li {
+    margin-left: 14px;
   }
 }
